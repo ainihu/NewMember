@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../build-NewMember-Desktop_Qt_5_9_2_MinGW_32bit-Debug/image/MainBackground.png</file>
+        <file>../build-NewMember-Desktop_Qt_5_9_2_MinGW_32bit-Debug/image/EPI.gif</file>
+        <file>../build-NewMember-Desktop_Qt_5_9_2_MinGW_32bit-Debug/image/picture.png</file>
+    </qresource>
+</RCC>
