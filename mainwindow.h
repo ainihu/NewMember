@@ -2,6 +2,11 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include "ui_mainwindow.h"
+#include <QDebug>
+#include "signup.h"
+#include "login.h"
+#include "rootui.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,7 +23,7 @@ public:
 private slots:
     void on_LoginButton_clicked();
 
-    void on_SignUpButton_clicked();
+    void on_SignupButton_clicked();
 
     void on_RootLoginButton_clicked();
 
@@ -26,6 +31,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+private:
+    Login * login = new Login;
+    Signup * signup = new Signup;
 };
 
 #endif // MAINWINDOW_H

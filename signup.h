@@ -1,5 +1,5 @@
-#ifndef SIGNUP_H
-#define SIGNUP_H
+#ifndef Signup_H
+#define Signup_H
 
 #include <QWidget>
 
@@ -7,16 +7,16 @@ namespace Ui {
 class signup;
 }
 
-class signup : public QWidget
+class Signup : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit signup(QWidget *parent = 0);
-    ~signup();
+    explicit Signup(QWidget *parent = 0);
+    ~Signup();
 
 private:
     Ui::signup *ui;
 };
 
-#endif // SIGNUP_H
+#endif // Signup_H

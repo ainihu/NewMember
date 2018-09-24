@@ -39,7 +39,7 @@
     <property name="geometry">
      <rect>
       <x>570</x>
-      <y>310</y>
+      <y>320</y>
       <width>100</width>
       <height>30</height>
      </rect>
@@ -79,71 +79,77 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:28pt; font-weight:600; color:#aa0000;&quot;&gt;EPI纳新管理系统&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
    </widget>
-   <widget class="QWidget" name="layoutWidget">
+   <widget class="QPushButton" name="LoginButton">
     <property name="geometry">
      <rect>
-      <x>290</x>
-      <y>150</y>
-      <width>122</width>
-      <height>136</height>
+      <x>291</x>
+      <y>137</y>
+      <width>120</width>
+      <height>40</height>
      </rect>
     </property>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QPushButton" name="LoginButton">
-       <property name="minimumSize">
-        <size>
-         <width>120</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="maximumSize">
-        <size>
-         <width>120</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image:\*url()</string>
-       </property>
-       <property name="text">
-        <string>登录</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="SignUpButton">
-       <property name="minimumSize">
-        <size>
-         <width>120</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image:\*url()</string>
-       </property>
-       <property name="text">
-        <string>注册</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="ExitButton">
-       <property name="minimumSize">
-        <size>
-         <width>120</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">border-image:\*url()</string>
-       </property>
-       <property name="text">
-        <string>退出</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="maximumSize">
+     <size>
+      <width>120</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:\*url()</string>
+    </property>
+    <property name="text">
+     <string>登录</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="SignUpButton">
+    <property name="geometry">
+     <rect>
+      <x>291</x>
+      <y>189</y>
+      <width>120</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:\*url()</string>
+    </property>
+    <property name="text">
+     <string>注册</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="ExitButton">
+    <property name="geometry">
+     <rect>
+      <x>291</x>
+      <y>241</y>
+      <width>120</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>120</width>
+      <height>40</height>
+     </size>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image:\*url()</string>
+    </property>
+    <property name="text">
+     <string>退出</string>
+    </property>
    </widget>
   </widget>
  </widget>

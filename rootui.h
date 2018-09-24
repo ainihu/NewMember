@@ -14,6 +14,7 @@ class RootUI : public QMainWindow
 public:
     explicit RootUI(QWidget *parent = 0);
     ~RootUI();
+    void run();
 
 private:
     Ui::RootUI *ui;

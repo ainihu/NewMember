@@ -12,3 +12,9 @@ RootUI::~RootUI()
 {
     delete ui;
 }
+
+//显示界面
+void RootUI::run()
+{
+    this->show();
+}

@@ -1,9 +1,4 @@
 #include "mainwindow.h"
-#include "ui_mainwindow.h"
-#include <QDebug>
-#include "signup.h"
-#include "login.h"
-#include "rootui.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -24,16 +19,13 @@ MainWindow::~MainWindow()
 // 普通用户登录
 void MainWindow::on_LoginButton_clicked()
 {
-    Login * tmp = new Login;
-    tmp->show();
+    this->login->show();
     this->hide();
 }
 
 // 普通用户注册
-void MainWindow::on_SignUpButton_clicked()
+void MainWindow::on_SignupButton_clicked()
 {
-    signup * tmp = new signup();
-    tmp->show();
     this->hide();
 }
 
@@ -41,8 +33,8 @@ void MainWindow::on_SignUpButton_clicked()
 void MainWindow::on_RootLoginButton_clicked()
 {
     RootUI * tmp = new RootUI();
-    tmp->show();
     this->hide();
+    tmp->run();
 }
 
 void MainWindow::on_ExitButton_clicked()
