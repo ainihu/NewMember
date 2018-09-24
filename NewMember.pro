@@ -31,15 +31,13 @@ SOURCES += \
         mainwindow.cpp \
     login.cpp \
     signup.cpp \
-    rootui.cpp \
-    manager.cpp
+    rootui.cpp
 
 HEADERS += \
         mainwindow.h \
     login.h \
     signup.h \
-    rootui.h \
-    manager.h
+    rootui.h
 
 FORMS += \
         mainwindow.ui \
