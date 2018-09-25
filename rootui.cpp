@@ -16,6 +16,24 @@ RootUI::~RootUI()
 //界面入口
 void RootUI::run()
 {
-    Login * tmp = new Login;
+    QString id, passwd;
+    Login * tmp = new Login(this);
     tmp->run();
+}
+
+void RootUI::clickLoginButton()
+{
+
+}
+void RootUI::clickCancelButton()
+{
+
+}
+bool RootUI::checkUser(QString id, QString passwd)
+{
+    return true;
+}
+void RootUI::setIdPasswd(QString id, QString passwd)
+{
+
 }

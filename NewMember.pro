@@ -32,14 +32,16 @@ SOURCES += \
     login.cpp \
     signup.cpp \
     rootui.cpp \
-    commonui.cpp
+    commonui.cpp \
+    baseclass.cpp
 
 HEADERS += \
         mainwindow.h \
     login.h \
     signup.h \
     rootui.h \
-    commonui.h
+    commonui.h \
+    baseclass.h
 
 FORMS += \
         mainwindow.ui \

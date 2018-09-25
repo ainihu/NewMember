@@ -3,12 +3,13 @@
 
 #include <QMainWindow>
 #include "login.h"
+#include "baseclass.h"
 
 namespace Ui {
 class RootUI;
 }
 
-class RootUI : public QMainWindow
+class RootUI : public QMainWindow, public baseClass
 {
     Q_OBJECT
 
@@ -16,7 +17,10 @@ public:
     explicit RootUI(QWidget *parent = 0);
     ~RootUI();
     void run();
-
+    virtual void clickLoginButton();
+    virtual void clickCancelButton();
+    virtual void setIdPasswd(QString, QString);
+    virtual bool checkUser(QString, QString);
 private:
     Ui::RootUI *ui;
 };

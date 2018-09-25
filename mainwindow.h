@@ -8,6 +8,7 @@
 #include "login.h"
 #include "rootui.h"
 #include "commonui.h"
+#include "baseclass.h"
 
 namespace Ui {
 class MainWindow;

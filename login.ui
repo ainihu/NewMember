@@ -216,7 +216,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="Cancle">
+               <widget class="QPushButton" name="CancelButton">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
