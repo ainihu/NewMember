@@ -37,6 +37,9 @@
      <height>414</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">border-image: url(:/NewMember/image/MainBackground.png);</string>
+   </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
    </property>
@@ -334,7 +337,7 @@
                  </size>
                 </property>
                 <property name="styleSheet">
-                 <string notr="true">border-image: url(:/build-NewMember-Desktop_Qt_5_9_2_MinGW_32bit-Debug/image/picture.png);</string>
+                 <string notr="true">border-image: url(:/NewMember/image/picture.png);</string>
                 </property>
                </widget>
               </item>

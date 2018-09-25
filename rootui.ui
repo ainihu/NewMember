@@ -26,7 +26,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">border-image: url(:/build-NewMember-Desktop_Qt_5_9_2_MinGW_32bit-Debug/image/MainBackground.png);</string>
+   <string notr="true">border-image: url(:/NewMember/image/MainBackground.png);</string>
   </property>
   <widget class="QWidget" name="centralwidget"/>
   <widget class="QMenuBar" name="menubar">

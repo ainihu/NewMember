@@ -7,6 +7,7 @@
 #include "signup.h"
 #include "login.h"
 #include "rootui.h"
+#include "commonui.h"
 
 namespace Ui {
 class MainWindow;
@@ -29,11 +30,15 @@ private slots:
 
     void on_ExitButton_clicked();
 
+    void on_SignUpButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 private:
-    Login * login = new Login;
-    Signup * signup = new Signup;
+    CommonUI * userlogin; // 登录
+    Signup * signup; // 注册
+    RootUI * rootLogin; //管理员
+
 };
 
 #endif // MAINWINDOW_H

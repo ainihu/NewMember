@@ -5,10 +5,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    // QObject::connect(this)
-    //signup * tmp = new signup;
-    //Login * tmp = new Login;
-    //tmp->show();
 }
 
 MainWindow::~MainWindow()
@@ -19,24 +15,34 @@ MainWindow::~MainWindow()
 // 普通用户登录
 void MainWindow::on_LoginButton_clicked()
 {
-    this->login->show();
     this->hide();
+    this->userlogin = new CommonUI;
+    if(this->userlogin == nullptr)
+        exit(EXIT_FAILURE);
+    this->userlogin->run();
 }
 
 // 普通用户注册
 void MainWindow::on_SignupButton_clicked()
 {
     this->hide();
+    this->signup = new Signup;
+    if(this->signup == nullptr)
+        exit(EXIT_FAILURE);
+    this->signup->run();
 }
 
 // 管理员登录
 void MainWindow::on_RootLoginButton_clicked()
 {
-    RootUI * tmp = new RootUI();
     this->hide();
-    tmp->run();
+    this->rootLogin = new RootUI;
+    if(this->rootLogin == nullptr)
+        exit(EXIT_FAILURE);
+    this->rootLogin->run();
 }
 
+//退出
 void MainWindow::on_ExitButton_clicked()
 {
     exit(EXIT_SUCCESS);

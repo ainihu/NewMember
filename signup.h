@@ -14,7 +14,8 @@ class Signup : public QWidget
 public:
     explicit Signup(QWidget *parent = 0);
     ~Signup();
-
+public:
+    void run();
 private:
     Ui::signup *ui;
 };

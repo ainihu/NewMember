@@ -13,8 +13,9 @@ RootUI::~RootUI()
     delete ui;
 }
 
-//显示界面
+//界面入口
 void RootUI::run()
 {
-    this->show();
+    Login * tmp = new Login;
+    tmp->run();
 }

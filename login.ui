@@ -35,7 +35,7 @@
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">border-image: url(:/build-NewMember-Desktop_Qt_5_9_2_MinGW_32bit-Debug/image/MainBackground.png);</string>
+    <string notr="true">border-image: url(:/NewMember/image/MainBackground.png);</string>
    </property>
    <property name="frameShape">
     <enum>QFrame::StyledPanel</enum>
@@ -104,7 +104,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit">
+               <widget class="QLineEdit" name="id">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -147,7 +147,7 @@
                </widget>
               </item>
               <item>
-               <widget class="QLineEdit" name="lineEdit_2">
+               <widget class="QLineEdit" name="passwd">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -216,7 +216,7 @@
                </spacer>
               </item>
               <item>
-               <widget class="QPushButton" name="LoginButton_2">
+               <widget class="QPushButton" name="Cancle">
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -258,8 +258,8 @@
   </widget>
  </widget>
  <tabstops>
-  <tabstop>lineEdit</tabstop>
-  <tabstop>lineEdit_2</tabstop>
+  <tabstop>id</tabstop>
+  <tabstop>passwd</tabstop>
   <tabstop>LoginButton</tabstop>
  </tabstops>
  <resources/>

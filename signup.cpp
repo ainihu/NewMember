@@ -5,12 +5,17 @@ Signup::Signup(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::signup)
 {
-    //ui->setupUi(this);
+    ui->setupUi(this);
     this->setWindowTitle("注册");
-    //ui->setAutoFillBackground(true);
 }
 
 Signup::~Signup()
 {
     delete ui;
+}
+
+//界面入口
+void Signup::run()
+{
+    this->show();
 }

@@ -2,6 +2,7 @@
 #define ROOTUI_H
 
 #include <QMainWindow>
+#include "login.h"
 
 namespace Ui {
 class RootUI;
