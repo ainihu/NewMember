@@ -15,6 +15,7 @@ public:
     virtual bool checkUser(QString, QString);
 private:
     Login * LoginUI;
+    QString Path;
 };
 
 #endif // COMMONUI_H

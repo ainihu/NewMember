@@ -8,7 +8,7 @@ Login::Login(baseClass * UIthis,  QWidget *parent) :
     ui->setupUi(this);
     this->setWindowTitle("登录");
     //设置账号和密码的正则
-    QRegExp rule("[0-9a-zA-Z]{6,12}");
+    QRegExp rule("[0-9a-zA-Z]{8}");
     ui->id->setValidator(new QRegExpValidator(rule, this));
     ui->passwd->setValidator(new QRegExpValidator(rule, this));
 

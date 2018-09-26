@@ -3,6 +3,7 @@
 CommonUI::CommonUI()
 {
     this->LoginUI = new Login(this);
+    this->Path = "E:\Git\NewMember\NewMember\info";
 }
 
 //界面入口
