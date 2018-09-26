@@ -19,8 +19,9 @@ public:
     ~Login();
     void run();
 private slots:
-    void clickLogin();
-    void clickCancel();
+    void clickLogin(); //点击登录按钮
+    void clickCancel(); //点击取消按钮
+
 private:
     Ui::Login *ui;
     baseClass *  UIthis;

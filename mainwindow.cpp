@@ -45,5 +45,20 @@ void MainWindow::on_RootLoginButton_clicked()
 //退出
 void MainWindow::on_ExitButton_clicked()
 {
-    exit(EXIT_SUCCESS);
+
+    int ret = QMessageBox::warning(nullptr, "Warning", "是否确定退出", QMessageBox::Ok | QMessageBox::Cancel);
+    switch(ret)
+    {
+    case QMessageBox::Ok:
+    {
+        exit(EXIT_SUCCESS);
+    }break;
+    case QMessageBox::Cancel:
+    {
+        return ;
+    }break;
+    default:break;
+    }
 }
+
+

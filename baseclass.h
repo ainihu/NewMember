@@ -3,6 +3,7 @@
 
 #include "QString"
 #include "QDebug"
+#include <QFile>
 
 class baseClass
 {
@@ -22,5 +23,6 @@ struct info
     int id;
     QString qq;
     QString phone;
+    QString passwd;
 };
 #endif // BASECLASS_H

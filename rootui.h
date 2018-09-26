@@ -23,6 +23,8 @@ public:
     virtual bool checkUser(QString, QString);
 private:
     Ui::RootUI *ui;
+    QString Path;
+    QVector<info> Userinfo;
 };
 
 #endif // ROOTUI_H

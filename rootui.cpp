@@ -6,6 +6,7 @@ RootUI::RootUI(QWidget *parent) :
     ui(new Ui::RootUI)
 {
     ui->setupUi(this);
+    this->Path = "E:\Git\NewMember\NewMember\info\root.txt";
 }
 
 RootUI::~RootUI()

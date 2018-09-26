@@ -7,10 +7,15 @@ Login::Login(baseClass * UIthis,  QWidget *parent) :
 {
     ui->setupUi(this);
     this->setWindowTitle("登录");
+
+    ui->id->setPlaceholderText(QString("学号8位纯数字"));
+    ui->passwd->setPlaceholderText(QString("登录密码"));
+
     //设置账号和密码的正则
-    QRegExp rule("[0-9a-zA-Z]{8}");
+    QRegExp rule("[0-9]{8}");
     ui->id->setValidator(new QRegExpValidator(rule, this));
-    ui->passwd->setValidator(new QRegExpValidator(rule, this));
+    QRegExp rule1("[0-9a-zA-Z_]{6, 12}");
+    ui->passwd->setValidator(new QRegExpValidator(rule1, this));
 
 
     // 连接登录按钮信号和槽
@@ -40,11 +45,10 @@ void Login::clickLogin()
     {
         this->UIthis->setIdPasswd(id, passwd);
     }
-    qDebug() << "login";
 }
 
 // 取消按钮
 void Login::clickCancel()
 {
-    qDebug() << "cancel";
+    // qDebug() << "cancel";
 }

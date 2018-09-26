@@ -9,6 +9,8 @@
 #include "rootui.h"
 #include "commonui.h"
 #include "baseclass.h"
+#include "QMessageBox"
+#include "signup.h"
 
 namespace Ui {
 class MainWindow;
@@ -24,14 +26,9 @@ public:
 
 private slots:
     void on_LoginButton_clicked();
-
     void on_SignupButton_clicked();
-
     void on_RootLoginButton_clicked();
-
     void on_ExitButton_clicked();
-
-    void on_SignUpButton_clicked();
 
 private:
     Ui::MainWindow *ui;
@@ -39,7 +36,6 @@ private:
     CommonUI * userlogin; // 登录
     Signup * signup; // 注册
     RootUI * rootLogin; //管理员
-
 };
 
 #endif // MAINWINDOW_H

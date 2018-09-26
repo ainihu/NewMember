@@ -3,7 +3,8 @@
 CommonUI::CommonUI()
 {
     this->LoginUI = new Login(this);
-    this->Path = "E:\Git\NewMember\NewMember\info";
+    this->Path = "E:\Git\NewMember\NewMember\info\common.txt";
+    QFile(this->Path).open(QFile::ReadOnly);
 }
 
 //界面入口
