@@ -16,7 +16,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_LoginButton_clicked()
 {
     this->hide();
-    this->userlogin = new CommonUI;
+    this->userlogin = new userui;
     if(this->userlogin == nullptr)
         exit(EXIT_FAILURE);
     this->userlogin->run();

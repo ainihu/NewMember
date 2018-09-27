@@ -7,7 +7,7 @@
 #include "signup.h"
 #include "login.h"
 #include "rootui.h"
-#include "commonui.h"
+#include "userui.h"
 #include "baseclass.h"
 #include "QMessageBox"
 #include "signup.h"
@@ -33,7 +33,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
 private:
-    CommonUI * userlogin; // 登录
+    userui * userlogin; // 登录
     Signup * signup; // 注册
     RootUI * rootLogin; //管理员
 };

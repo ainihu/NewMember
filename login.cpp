@@ -1,11 +1,12 @@
 #include "login.h"
 #include "ui_login.h"
 
-Login::Login(baseClass * UIthis,  QWidget *parent) :
+Login::Login(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::Login), UIthis(UIthis)
+    ui(new Ui::Login)
 {
     ui->setupUi(this);
+
     this->setWindowTitle("登录");
 
     ui->id->setPlaceholderText(QString("学号8位纯数字"));
@@ -14,7 +15,7 @@ Login::Login(baseClass * UIthis,  QWidget *parent) :
     //设置账号和密码的正则
     QRegExp rule("[0-9]{8}");
     ui->id->setValidator(new QRegExpValidator(rule, this));
-    QRegExp rule1("[0-9a-zA-Z_]{6, 12}");
+    QRegExp rule1("[0-9a-zA-Z]{6,12}");
     ui->passwd->setValidator(new QRegExpValidator(rule1, this));
 
 
@@ -30,9 +31,15 @@ Login::~Login()
 }
 
 //界面入口
-void Login::run()
+void Login::run(baseClass * UIthis = nullptr)
 {
-    this->show();
+    this->UIthis = UIthis;
+    if(this->UIthis == nullptr)
+        return;
+    else
+    {
+        this->show();
+    }
 }
 
 // 登录按钮
@@ -40,8 +47,8 @@ void Login::clickLogin()
 {
     QString id = ui->id->text();
     QString passwd = ui->passwd->text();
-
-    if(this->UIthis->checkUser(id, passwd))
+    bool tmp = this->UIthis->checkUser(id, passwd);
+    if(tmp)
     {
         this->UIthis->setIdPasswd(id, passwd);
     }

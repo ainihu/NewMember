@@ -18,8 +18,8 @@ RootUI::~RootUI()
 void RootUI::run()
 {
     QString id, passwd;
-    Login * tmp = new Login(this);
-    tmp->run();
+    Login * tmp = new Login();
+    tmp->run(this);
 }
 
 void RootUI::clickLoginButton()

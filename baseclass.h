@@ -4,6 +4,7 @@
 #include "QString"
 #include "QDebug"
 #include <QFile>
+#include <QStringList>
 
 class baseClass
 {

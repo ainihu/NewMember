@@ -15,9 +15,9 @@ class Login : public QWidget
     Q_OBJECT
 
 public:
-    explicit Login(baseClass * , QWidget *parent = 0);
+    explicit Login(QWidget *parent = 0);
     ~Login();
-    void run();
+    void run(baseClass *);
 private slots:
     void clickLogin(); //点击登录按钮
     void clickCancel(); //点击取消按钮

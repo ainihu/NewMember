@@ -32,22 +32,23 @@ SOURCES += \
     login.cpp \
     signup.cpp \
     rootui.cpp \
-    commonui.cpp \
-    baseclass.cpp
+    baseclass.cpp \
+    userui.cpp
 
 HEADERS += \
         mainwindow.h \
     login.h \
     signup.h \
     rootui.h \
-    commonui.h \
-    baseclass.h
+    baseclass.h \
+    userui.h
 
 FORMS += \
         mainwindow.ui \
     login.ui \
     signup.ui \
-    rootui.ui
+    rootui.ui \
+    userui.ui
 
 DISTFILES += \
     ApplicationIcon.rc
