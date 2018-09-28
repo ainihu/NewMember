@@ -1,10 +1,12 @@
 #include "mainwindow.h"
+#include "baseclass.h"
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
 }
 
 MainWindow::~MainWindow()
@@ -61,4 +63,9 @@ void MainWindow::on_ExitButton_clicked()
     }
 }
 
+void MainWindow::on_CancleButton_clicked()
+{
+    this->show();
+    //cancel->hide();
+}
 

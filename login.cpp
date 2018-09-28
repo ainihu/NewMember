@@ -18,7 +18,6 @@ Login::Login(QWidget *parent) :
     QRegExp rule1("[0-9a-zA-Z]{6,12}");
     ui->passwd->setValidator(new QRegExpValidator(rule1, this));
 
-
     // 连接登录按钮信号和槽
     connect(this->ui->LoginButton, SIGNAL(clicked()), this, SLOT(clickLogin()));
     // 连接取消按钮信号和槽
@@ -47,15 +46,12 @@ void Login::clickLogin()
 {
     QString id = ui->id->text();
     QString passwd = ui->passwd->text();
-    bool tmp = this->UIthis->checkUser(id, passwd);
-    if(tmp)
-    {
-        this->UIthis->setIdPasswd(id, passwd);
-    }
+    this->UIthis->checkUser(id, passwd);
 }
 
 // 取消按钮
 void Login::clickCancel()
 {
+    //emit this->cancle(this);
     // qDebug() << "cancel";
 }

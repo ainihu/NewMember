@@ -12,8 +12,9 @@ public:
     baseClass();
     virtual void clickLoginButton() = 0;
     virtual void clickCancelButton() = 0;
-    virtual void setIdPasswd(QString, QString) = 0;
-    virtual bool checkUser(QString, QString) = 0;
+    virtual void checkUser(QString, QString) = 0;
+signals:
+    void cancle();
 };
 
 struct info

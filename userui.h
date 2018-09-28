@@ -18,11 +18,16 @@ public:
     explicit userui(QWidget *parent = 0);
     ~userui();
     void run();
-    virtual void clickLoginButton(); //点击登录按钮
+    virtual void clickLoginButton(){} //点击登录按钮
     virtual void clickCancelButton(); //点击取消按钮
-    virtual void setIdPasswd(QString, QString); //设置学号和密码
-    virtual bool checkUser(QString, QString); // 校验用户是否合法
+    virtual void checkUser(QString, QString); // 校验用户是否合法
+    void clickLoadoutButton();
+    void setInfo();
+private slots:
+    void on_canclePushButton_clicked();
+
 private:
+    info currentUser;
     Ui::userui *ui;
     Login * LoginUI;
     QVector<info> Userinfo;

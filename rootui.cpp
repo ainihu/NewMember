@@ -19,22 +19,19 @@ void RootUI::run()
 {
     QString id, passwd;
     Login * tmp = new Login();
+
     tmp->run(this);
 }
 
 void RootUI::clickLoginButton()
 {
 
-}
+} 
 void RootUI::clickCancelButton()
 {
 
 }
-bool RootUI::checkUser(QString id, QString passwd)
+void RootUI::checkUser(QString id, QString passwd)
 {
-    return true;
-}
-void RootUI::setIdPasswd(QString id, QString passwd)
-{
-
+    return ;
 }

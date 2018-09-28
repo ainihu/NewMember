@@ -19,8 +19,7 @@ public:
     void run();
     virtual void clickLoginButton();
     virtual void clickCancelButton();
-    virtual void setIdPasswd(QString, QString);
-    virtual bool checkUser(QString, QString);
+    virtual void checkUser(QString, QString);
 private:
     Ui::RootUI *ui;
     QString Path;

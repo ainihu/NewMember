@@ -2,5 +2,4 @@
 
 baseClass::baseClass()
 {
-
 }

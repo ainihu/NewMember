@@ -4,6 +4,7 @@
 #include <qiodevice.h>
 #include <QStringList>
 #include "login.h"
+#include "baseclass.h"
 
 userui::userui(QWidget *parent) :
     QMainWindow(parent),
@@ -11,29 +12,29 @@ userui::userui(QWidget *parent) :
 {
     ui->setupUi(this);
     this->LoginUI = new Login();
+}
+//界面入口
+void userui::run()
+{
     const QString path = "../NewMember/info/common.txt";
     QString data;
     QFile fd(path);
     QStringList list;
     info tmp;
+/*
+    info currentUser;
+    Ui::userui *ui;
+    Login * LoginUI;
+    QVector<info> Userinfo;
+*/
+    //初始化环境
+    this->Userinfo.clear();
 
     bool ret = fd.open(QIODevice::ReadOnly);
     if(ret == false)
     {
         exit(EXIT_FAILURE);
     }
-    /*
-struct info
-{
-    QString name;
-    bool sex;
-    int age;
-    int id;
-    QString qq;
-    QString phone;
-    QString passwd;
-};
-    */
      while(!fd.atEnd())
     {
         data = fd.readLine();
@@ -49,43 +50,51 @@ struct info
         tmp.passwd = list.at(6);
         this->Userinfo.append(tmp);
     }
-}
-//界面入口
-void userui::run()
-{
-    if(this->LoginUI == nullptr)
-        this->LoginUI = new Login();
     this->LoginUI->run(this);
 }
 
-
-void userui::clickLoginButton()
+void userui::clickLoadoutButton()
 {
 
-    delete this->LoginUI;
-    this->LoginUI = nullptr;
-
 }
-
 void userui::clickCancelButton()
 {
-
+    this->hide();
+    // emit this->cancle(this);
 }
 
-bool userui::checkUser(QString id, QString passwd)
+void userui::checkUser(QString id, QString passwd)
 {
     foreach (info it, this->Userinfo) {
         if(it.id == id.toInt() && it.passwd == passwd)
-            return true;
+        {
+            this->ui->idLineEdit->clear();
+            this->ui->passwdLineEdit->clear();
+            this->currentUser.name += it.name;
+            this->currentUser.sex += it.sex;
+            this->currentUser.age += it.age;
+            this->currentUser.id += it.id;
+            this->currentUser.qq += it.qq;
+            this->currentUser.phone += it.phone;
+            this->currentUser.passwd += it.passwd;
+
+            this->LoginUI->hide();
+            this->show();
+            break;
+            /*
+            struct info
+            {
+                QString name;
+                bool sex;
+                int age;
+                int id;
+                QString qq;
+                QString phone;
+                QString passwd;
+            };
+            */
+        }
     }
-    return false;
-}
-
-void userui::setIdPasswd(QString id, QString passwd)
-{
-
-    delete this->LoginUI;
-    this->LoginUI = nullptr;
 }
 
 userui::~userui()

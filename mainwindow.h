@@ -29,7 +29,7 @@ private slots:
     void on_SignupButton_clicked();
     void on_RootLoginButton_clicked();
     void on_ExitButton_clicked();
-
+    void on_CancleButton_clicked();
 private:
     Ui::MainWindow *ui;
 private:

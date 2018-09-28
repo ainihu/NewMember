@@ -29,3 +29,8 @@ void Signup::on_registButton_clicked()
 {
 
 }
+
+void Signup::on_canclePushButton_clicked()
+{
+
+}
