@@ -10,11 +10,10 @@ class baseClass
 {
 public:
     baseClass();
+public slots:
     virtual void clickLoginButton() = 0;
     virtual void clickCancelButton() = 0;
     virtual void checkUser(QString, QString) = 0;
-signals:
-    void cancle();
 };
 
 struct info

@@ -28,14 +28,28 @@
   <property name="styleSheet">
    <string notr="true">border-image: url(:/NewMember/image/MainBackground.png);</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTableWidget" name="tableWidget">
+    <property name="geometry">
+     <rect>
+      <x>230</x>
+      <y>70</y>
+      <width>256</width>
+      <height>192</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-image: url(&quot;&quot;);</string>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
      <width>720</width>
-     <height>23</height>
+     <height>26</height>
     </rect>
    </property>
    <property name="styleSheet">
@@ -51,6 +65,8 @@
     <addaction name="action"/>
     <addaction name="action_2"/>
     <addaction name="action_3"/>
+    <addaction name="separator"/>
+    <addaction name="action_9"/>
    </widget>
    <widget class="QMenu" name="menu_2">
     <property name="styleSheet">
@@ -109,6 +125,16 @@
   <action name="action_6">
    <property name="text">
     <string>关于开发者</string>
+   </property>
+  </action>
+  <action name="action_8">
+   <property name="text">
+    <string>修改管理员账号</string>
+   </property>
+  </action>
+  <action name="action_9">
+   <property name="text">
+    <string>修改管理员密码</string>
    </property>
   </action>
  </widget>

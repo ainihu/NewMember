@@ -32,13 +32,19 @@ Login::~Login()
 //界面入口
 void Login::run(baseClass * UIthis = nullptr)
 {
+    if(this->isHidden())
+        this->show();
+
+    //清除账户信息
+    this->ui->id->clear();
+    this->ui->passwd->clear();
+
     this->UIthis = UIthis;
     if(this->UIthis == nullptr)
         return;
     else
-    {
         this->show();
-    }
+
 }
 
 // 登录按钮
@@ -52,6 +58,6 @@ void Login::clickLogin()
 // 取消按钮
 void Login::clickCancel()
 {
-    //emit this->cancle(this);
-    // qDebug() << "cancel";
+    this->hide();
+    emit this->cancelLogin();
 }

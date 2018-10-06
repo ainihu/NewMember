@@ -263,5 +263,22 @@
   <tabstop>LoginButton</tabstop>
  </tabstops>
  <resources/>
- <connections/>
+ <connections>
+  <connection>
+   <sender>passwd</sender>
+   <signal>returnPressed()</signal>
+   <receiver>LoginButton</receiver>
+   <slot>click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>420</x>
+     <y>200</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>300</x>
+     <y>284</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

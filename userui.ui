@@ -131,7 +131,7 @@
               </widget>
              </item>
              <item>
-              <widget class="QLineEdit" name="ageLineEdit_2">
+              <widget class="QLineEdit" name="sexLineEdit">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
@@ -437,7 +437,7 @@
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_7">
                  <item>
-                  <widget class="QPushButton" name="registButton">
+                  <widget class="QPushButton" name="SaveAsInfo">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>

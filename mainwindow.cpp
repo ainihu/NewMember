@@ -6,7 +6,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
 }
 
 MainWindow::~MainWindow()
@@ -21,6 +20,7 @@ void MainWindow::on_LoginButton_clicked()
     this->userlogin = new userui;
     if(this->userlogin == nullptr)
         exit(EXIT_FAILURE);
+    connect(this->userlogin, SIGNAL(Signal_showMainWindow()), this, SLOT(showWindow()));
     this->userlogin->run();
 }
 
@@ -31,6 +31,7 @@ void MainWindow::on_SignupButton_clicked()
     this->signup = new Signup;
     if(this->signup == nullptr)
         exit(EXIT_FAILURE);
+    connect(this->signup, SIGNAL(Signal_showMainWindow()), this, SLOT(showWindow()));
     this->signup->run();
 }
 
@@ -41,6 +42,7 @@ void MainWindow::on_RootLoginButton_clicked()
     this->rootLogin = new RootUI;
     if(this->rootLogin == nullptr)
         exit(EXIT_FAILURE);
+    connect(this->rootLogin, SIGNAL(Signal_showMainWindow()), this, SLOT(showWindow()));
     this->rootLogin->run();
 }
 
@@ -67,5 +69,10 @@ void MainWindow::on_CancleButton_clicked()
 {
     this->show();
     //cancel->hide();
+}
+
+void MainWindow::showWindow()
+{
+    this->show();
 }
 
